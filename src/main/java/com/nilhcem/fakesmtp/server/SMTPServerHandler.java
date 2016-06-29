@@ -15,8 +15,7 @@ import com.nilhcem.fakesmtp.core.exception.OutOfRangePortException;
  * @author Nilhcem
  * @since 1.0
  */
-public enum SMTPServerHandler {
-	INSTANCE;
+public class SMTPServerHandler {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SMTPServerHandler.class);
 	private final MailSaver mailSaver = new MailSaver();

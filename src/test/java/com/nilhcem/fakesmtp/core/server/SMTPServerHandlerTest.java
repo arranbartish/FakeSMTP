@@ -1,6 +1,9 @@
 package com.nilhcem.fakesmtp.core.server;
 
 import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import com.nilhcem.fakesmtp.core.exception.BindPortException;
 import com.nilhcem.fakesmtp.core.exception.OutOfRangePortException;
@@ -23,6 +26,11 @@ public class SMTPServerHandlerTest {
 	public void stopShouldDoNothingIfServerIsAlreadyStopped() {
 		SMTPServerHandler.INSTANCE.stopServer();
 		SMTPServerHandler.INSTANCE.stopServer();
+		SMTPServerHandler.INSTANCE.stopServer();
+	}
+
+	@Before
+	public void makeSureServerReallyIsStopped() {
 		SMTPServerHandler.INSTANCE.stopServer();
 	}
 }
